@@ -45,14 +45,15 @@ class App extends Component {
         selectedVideo: videos[0]
       });
       // this.setState({ videos: videos });
-      // console.log(this.state);
+      console.log(this.state.videos);
     });
   }
 
   render() {
     const videoSearch = _.debounce((term)=>{this.videoSearch(term)}, 500);
     return (
-      <div>
+      <div className="index">
+        <h3 className="app-name"> 모두 안녕!! 태훈이의 리액트 첫 작품이야!</h3>
         <SearchBar onSearchTermChange={videoSearch}/>
         <VideoDetail video={this.state.selectedVideo} />
         <VideoList
