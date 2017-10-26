@@ -1,11 +1,9 @@
-
 // state => 자바스크립트 객체 : 유저 이벤트를 저장하고 반응하는데 이용
 // 컴포넌트들은 그 자체의 스테이트 객체를 가짐
 // 스테이트에 변화가 생기면 리렌더, 자식 요소들에게도 렌더링 강제함
 // 스테이트를 사용하기 전에 초기화 필요(constructor : 모든 클래스가 생성 될 때마다 실행)
 // 클래스 기반 컴포넌트만 스테이트 가능
 
-// module
 import React, { Component } from 'react';
 
 // 함수형 컴포넌트
@@ -29,19 +27,17 @@ class SearchBar extends Component {
     // 이렇게는 사용하지 마..
     // this.state.term = event.target.vaule 
     return (
-      <div>
+      <div className="search-bar">
         <input
           value={this.state.term}
-          onChange={event => this.setState({ term: event.target.value })} />
+          onChange={event => this.onInputChange(event.target.value)} />
       </div>);
-    // <div>
-    //   <input onChange={event => this.setState({ term: event.target.value })} />
-    //   <hr />
-    //   {/* this.state.term 참조 */}
-    //   Value of the Input: {this.state.term}
-    // </div>);
   }
-
+  onInputChange(term){
+    this.setState({term});
+    this.props.onSearchTermChange(term);
+  }
+}
   // render() {
   //   return <input onChange={this.onInputChange} />;
   // }
@@ -49,7 +45,6 @@ class SearchBar extends Component {
   // onInputChange(event) {
   //   console.log(event.target.value)
   // }
-}
 // new SearchBar
 
 
