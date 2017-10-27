@@ -16,12 +16,11 @@ const VideoDetail = ({ video }) => {
       </div>
       <div className="details">
         <div className="details-title">
-          <div className="title" href="#">{video.snippet.title}</div>
+          <div className="title">{video.snippet.title}</div>
         </div>
         <hr />
-        올린이 : {video.snippet.channelTitle}
-        <br />
-        게시일 : {(video.snippet.publishedAt).split('T')[0]}
+        <div className="author">올린이 : {video.snippet.channelTitle}</div>
+        <div className="publishedAt">게시일 : {(video.snippet.publishedAt).split('T')[0]}</div>
         <hr />
         <div className="details-description">
           <div>{video.snippet.description}</div>

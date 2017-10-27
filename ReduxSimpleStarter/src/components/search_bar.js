@@ -31,7 +31,7 @@ class SearchBar extends Component {
         <input
           value={this.state.term}
           onChange={event => this.onInputChange(event.target.value)}
-          placeholder="찾고 싶은 동영상을 검색해보세요!" />
+          placeholder=" 찾고 싶은 동영상을 검색해보세요!" />
       </div>);
   }
   onInputChange(term){

@@ -13,7 +13,9 @@
 }
 
 .search-bar input {
-  width: 75%;
+  width: 100%;
+  border: 1px solid rgb(241, 222, 222);
+  border-radius: 4px;
 }
 
 .video-item img {
@@ -21,26 +23,30 @@
 }
 
 .video-detail .details {
-  margin-top: 10px;
+  margin: 10px 0 10px 0;
   padding: 10px;
-  border: 1px solid #ddd;
+  border: 1px solid rgb(241, 222, 222);
   border-radius: 4px;
 }
+
 .details-title {
   font-size: 1.3rem;
-  /* background-color: red; */
 }
-.title {
-  cursor: pointer;
-}
+
 .details-description {
   text-overflow: hidden;
-  white-space: pre-line;
   font-size: 1.0rem;
-  /* background-color: blue; */
 }
+
+.author .publishedAt {
+  margin: 0;
+  font-size: 1.5rem;
+}
+
 .list-group-item {
   cursor: pointer;
+  margin-left: 10px;
+  background: none !important;
 }
 
 .list-group-item:hover {

@@ -53,7 +53,7 @@ class App extends Component {
     const videoSearch = _.debounce((term)=>{this.videoSearch(term)}, 500);
     return (
       <div className="index">
-        <h3 className="app-name"> 모두 안녕!! 태훈이의 리액트 첫 작품이야!</h3>
+        <h3 className="app-name"> 유튜브 검색기</h3>
         <SearchBar onSearchTermChange={videoSearch}/>
         <VideoDetail video={this.state.selectedVideo} />
         <VideoList
